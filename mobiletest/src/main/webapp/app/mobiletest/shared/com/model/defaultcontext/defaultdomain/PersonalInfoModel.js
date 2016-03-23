@@ -1,0 +1,35 @@
+Ext.define('Mobiletest.mobiletest.shared.com.model.defaultcontext.defaultdomain.PersonalInfoModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "pk",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "fName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "age",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "dateOfBirth",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

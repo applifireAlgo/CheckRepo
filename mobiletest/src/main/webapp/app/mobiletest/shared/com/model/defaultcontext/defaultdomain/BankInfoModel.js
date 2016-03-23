@@ -1,0 +1,39 @@
+Ext.define('Mobiletest.mobiletest.shared.com.model.defaultcontext.defaultdomain.BankInfoModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "pk1",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "uploadPic",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "latitude",
+          "type": "number",
+          "defaultValue": ""
+     }, {
+          "name": "longitude",
+          "type": "number",
+          "defaultValue": ""
+     }, {
+          "name": "birthCertificate",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});
