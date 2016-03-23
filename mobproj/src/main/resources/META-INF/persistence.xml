@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+
+	<persistence-unit name="mobproj" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<properties>
+			<property name="eclipselink.ddl-generation" value="none"/>
+			<property name="eclipselink.logging.level" value="FINEST"/>
+			<property name="eclipselink.weaving" value="false"/>
+			<property name="eclipselink.jdbc.allow-native-sql-queries" value="true"/>
+			<property name="eclipselink.deploy-on-startup" value="true"/>
+
+			<property name="eclipselink.connection-pool.default.initial" value="15"/>
+			<property name="eclipselink.connection-pool.default.min" value="6"/>
+			<property name="eclipselink.connection-pool.default.max" value="10"/>
+
+
+		<property name="eclipselink.dialect" value="org.eclipse.persistence.platform.database.MySQLPlatform"/>
+        <property name="eclipselink.session.customizer" value="mobproj.app.config.UUIDGenerator"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost-MYSQL:3306/mobproj"/>
+        <property name="javax.persistence.jdbc.user" value="mobproj"/>
+        <property name="javax.persistence.jdbc.password" value="mobproj"/>
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+        </properties>
+	<class>mobproj.app.shared.authentication.ArtPasswordAlgorithm</class>
+    <class>mobproj.app.shared.authentication.ArtPasswordPolicy</class>
+    <class>mobproj.app.shared.organizationboundedcontext.location.Timezone</class>
+    <class>mobproj.app.shared.organizationboundedcontext.location.Language</class>
+    <class>mobproj.app.shared.organizationboundedcontext.location.Country</class>
+    <class>mobproj.app.shared.organizationboundedcontext.location.State</class>
+    <class>mobproj.app.shared.organizationboundedcontext.location.City</class>
+    <class>mobproj.app.shared.organizationboundedcontext.location.AddressType</class>
+    <class>mobproj.app.shared.organizationboundedcontext.location.Address</class>
+    <class>mobproj.app.shared.organizationboundedcontext.contacts.ContactType</class>
+    <class>mobproj.app.shared.organizationboundedcontext.contacts.CommunicationGroup</class>
+    <class>mobproj.app.shared.organizationboundedcontext.contacts.CommunicationType</class>
+    <class>mobproj.app.shared.organizationboundedcontext.contacts.Gender</class>
+    <class>mobproj.app.shared.organizationboundedcontext.contacts.Title</class>
+    <class>mobproj.app.shared.organizationboundedcontext.contacts.CoreContacts</class>
+    <class>mobproj.app.shared.organizationboundedcontext.contacts.CommunicationData</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.PasswordAlgo</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.PasswordPolicy</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.Question</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.UserAccessLevel</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.UserAccessDomain</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.User</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.Login</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.LoginSession</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.PassRecovery</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.UserData</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authentication.SessionData</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authorization.Roles</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authorization.AppMenus</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authorization.RoleMenuBridge</class>
+    <class>mobproj.app.shared.aaaboundedcontext.authorization.UserRoleBridge</class>
+    </persistence-unit>
+
+</persistence>
